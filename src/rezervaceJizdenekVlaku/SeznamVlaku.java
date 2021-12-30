@@ -1,6 +1,8 @@
 package rezervaceJizdenekVlaku;
 
-public class SeznamVlaku extends SeznamObjektu{
+import java.io.Serializable;
+
+public class SeznamVlaku extends SeznamObjektu implements Serializable {
 
     private Vlak[] seznam;
 
