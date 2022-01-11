@@ -14,11 +14,32 @@ public enum TypVagonu {
         BMZ(9,54),
         BPEE(1,100);
 
-        private final int pocetKupe;
+    private static final TypVagonu[] typy = TypVagonu.values();
+
+    public static TypVagonu getTypVagonu(int i) {
+        return typy[i];
+    }
+
+    public static TypVagonu getRandomTypVagonu() {
+        int r = (int)(Math.random() * typy.length);
+        return typy[r];
+    }
+
+    public int getPocetKupe() {
+        return pocetKupe;
+    }
+
+    public int getPocetSedadel() {
+        return pocetSedadel;
+    }
+
+    private final int pocetKupe;
         private final int pocetSedadel;
 
     TypVagonu(int pocetKupe, int pocetSedadel){
             this.pocetKupe = pocetKupe;
             this.pocetSedadel = pocetSedadel;
     }
+
+
 }

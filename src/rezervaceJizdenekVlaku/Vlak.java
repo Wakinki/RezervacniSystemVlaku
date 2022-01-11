@@ -16,16 +16,25 @@ import java.io.Serializable;
  */
 public class Vlak implements Serializable{
     private String nazev;
-    private ArrayList<TypVagonu> vagony;
+    private ArrayList<Vagon> vagony;
     private ArrayList<Rezervace> rezervace;
-    private int delkaVlaku = vagony.size();
+    private int delkaVlaku;
 
 
 
     public Vlak(String nazev) {
         this.nazev = nazev;
-        this.vagony = new ArrayList<TypVagonu>();
+        this.vagony = nactiVagony(3,10);
         this.rezervace = new ArrayList<Rezervace>();
+        this.delkaVlaku = vagony.size();
+    }
+
+    private ArrayList<Vagon> nactiVagony(int minVagonu, int maxVagonu) {
+        ArrayList<Vagon> v = new ArrayList<Vagon>();
+        for(int i=0;i< minVagonu + (int)(Math.random() * maxVagonu);i++)
+        v.add(new Vagon(i+367,TypVagonu.getRandomTypVagonu()));
+
+        return v;
     }
 
     public String getNazev() {
@@ -36,11 +45,11 @@ public class Vlak implements Serializable{
         return delkaVlaku;
     }
 
-    public ArrayList<TypVagonu> getVagony() {
+    public ArrayList<Vagon> getVagony() {
         return vagony;
     }
 
-    public void setVagony(ArrayList<TypVagonu> vagony) {
+    public void setVagony(ArrayList<Vagon> vagony) {
         this.vagony = vagony;
     }
 
@@ -52,7 +61,7 @@ public class Vlak implements Serializable{
         this.rezervace = rezervace;
     }
 
-    public void pridejVagon(TypVagonu v ){//přidá vagón do pole vagonu
+    public void pridejVagon(Vagon v ){//přidá vagón do pole vagonu
         vagony.add(v);
     }
 

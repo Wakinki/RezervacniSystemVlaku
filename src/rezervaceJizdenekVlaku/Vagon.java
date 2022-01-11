@@ -11,17 +11,34 @@ package rezervaceJizdenekVlaku;
  */
 public class Vagon {
     
-    private String nazev;
+    private int cislo;
     private int[] sedadla;
-    private int[] rezervace;
+    //private int[] rezervace;
+    private TypVagonu typVagonu;
     
     //TODO vymyslet jak načíst typy vagonů
     
-    public Vagon(){
-        
+    public Vagon(int cislo, TypVagonu typ){
+        this.cislo=cislo;
+        this.typVagonu = typ;
+        sedadla = new int[typ.getPocetSedadel()];
+        insertSedadla(sedadla);
+    }
+
+    /*private void insertSedadla(int[] sedadla){ //Funkce která popíše sedadla jako ve vlaku {11,12,13,14,15,16,21,22...
+        int pocetSedacekVKupe = typVagonu.getPocetSedadel()/ typVagonu.getPocetKupe();
+        for (int sedadlo : sedadla) {
+
+            int cisloSedadla =
+
+            sedadla[sedadlo] = cisloSedadla;
+        }*/
+
+    private void insertSedadla(int[] sedadla){ //Funkce která popíše sedadla od 1 do počtu sedadel ve vagonu
+        for (int sedadlo : sedadla) {
+            sedadla[sedadlo] = sedadlo+1;
+        }
     }
     
-    
-    
-    
+
 }

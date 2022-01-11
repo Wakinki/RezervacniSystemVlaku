@@ -5,6 +5,11 @@
  */
 package rezervaceJizdenekVlaku;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
 /**
  *
  * @author Michal Wackermann
@@ -12,11 +17,13 @@ package rezervaceJizdenekVlaku;
 public class Rezervace {
 
     private Uzivatel vlastnikRezervace;
+    private String nazevVlaku;
     private int cisloVagonu;
     private int sedadlo;
-    private String nazevVlaku;
 
 
+
+    //TODO předělat pořadí hodnot tak aby dávali větší smyslo (vlastnikRezervace,nazevVlaku,cisloVagonu,sedadlo)
     public Rezervace(Uzivatel vlastnikRezervace, int cisloVagonu, int sedadlo, String nazevVlaku) {
         this.vlastnikRezervace = vlastnikRezervace;
         this.cisloVagonu = cisloVagonu;
@@ -54,5 +61,26 @@ public class Rezervace {
 
     public void setNazevVlaku(String nazevVlaku) {
         this.nazevVlaku = nazevVlaku;
+    }
+
+
+    public void printReservationFile(){
+
+
+        String[] dataRezervace = {vlastnikRezervace.getFullName(), nazevVlaku, String.valueOf(cisloVagonu), String.valueOf(sedadlo)};
+
+        try {
+            BufferedWriter resWriter =
+                    new BufferedWriter((new FileWriter(".\\Jízdenky"+ (vlastnikRezervace.getFullName()).toLowerCase() +".txt")));
+
+            for(String data: dataRezervace){
+                resWriter.write(data);//TODO struktura vypsání dat do souboru
+                resWriter.newLine();
+            }
+
+            resWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

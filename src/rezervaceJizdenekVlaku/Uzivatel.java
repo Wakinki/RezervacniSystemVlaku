@@ -12,10 +12,16 @@ package rezervaceJizdenekVlaku;
 public class Uzivatel {
    private String jmeno;
    private String prijmeni;
+    private String fullName;
 
     public Uzivatel(String jmeno, String prijmeni) {
         this.jmeno = jmeno;
         this.prijmeni = prijmeni;
+        fullName = this.jmeno +" "+ this.prijmeni;
+    }
+
+    public String getFullName() {
+        return fullName;
     }
 
     public String getJmeno() {

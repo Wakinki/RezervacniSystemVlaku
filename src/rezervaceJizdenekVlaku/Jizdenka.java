@@ -10,7 +10,7 @@ package rezervaceJizdenekVlaku;
  * @author Michal Wackermann
  */
 public class Jizdenka {
-    
+    //TODO odstranit třídu: mimo rozsah projektu
     Vlak vlak;
     Rezervace rezervace;
     String pocatecniStanice;
