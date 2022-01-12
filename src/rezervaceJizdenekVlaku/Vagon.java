@@ -35,8 +35,8 @@ public class Vagon {
         }*/
 
     private void insertSedadla(int[] sedadla){ //Funkce která popíše sedadla od 1 do počtu sedadel ve vagonu
-        for (int sedadlo : sedadla) {
-            sedadla[sedadlo] = sedadlo+1;
+        for (int i=0;i<sedadla.length;i++) {
+            sedadla[i] = i+1;
         }
     }
     

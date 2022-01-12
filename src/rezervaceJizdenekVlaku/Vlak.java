@@ -23,7 +23,7 @@ public class Vlak implements Serializable{
 
 
     public Vlak(String nazev) {
-        this.nazev = nazev;
+        this.nazev = nazev;//TODO napsat enum názvy vlaků aby se při inicializaci mohly náhodně generovat (možnost to samé udělat se stanicemi)
         this.vagony = nactiVagony(3,10);
         this.rezervace = new ArrayList<Rezervace>();
         this.delkaVlaku = vagony.size();

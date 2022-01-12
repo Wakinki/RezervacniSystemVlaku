@@ -27,7 +27,7 @@ public class Jizdenka {
         this.cilovaStanice = cS;
     }
     
-    //TODO napsat metodu pro vypsání Jízdenky
+
     public void Display(){
 
     }

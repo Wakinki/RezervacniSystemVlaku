@@ -8,8 +8,8 @@ public class Main {
 
       Uzivatel u1 = new Uzivatel("Karel", "Máslo");
       Vlak v1 = new Vlak("Krušnohor");
-      Rezervace r1 = new Rezervace(u1,3,13,"Krušnohor");
-        Rezervace r2 = new Rezervace(u1,2,13,"Krušnohor");
+      Rezervace r1 = new Rezervace(u1,"Krušnohor",369,13);
+      Rezervace r2 = new Rezervace(u1,"Krušnohor",367,2);
 
         r2.printReservationFile();
       v1.pridejRezervaci(r1);

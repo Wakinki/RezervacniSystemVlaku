@@ -28,5 +28,6 @@ public class SeznamVlaku extends SeznamObjektu implements Serializable {
         //TODO napsat metodu na načtení vlaků do souboru
     }
 
+    //TODO napsat třídu na naplnění seznamu náhodnými vlaky
 
 }

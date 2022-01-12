@@ -24,11 +24,13 @@ public class Rezervace {
 
 
     //TODO předělat pořadí hodnot tak aby dávali větší smyslo (vlastnikRezervace,nazevVlaku,cisloVagonu,sedadlo)
-    public Rezervace(Uzivatel vlastnikRezervace, int cisloVagonu, int sedadlo, String nazevVlaku) {
+    public Rezervace(Uzivatel vlastnikRezervace,String nazevVlaku,int cisloVagonu, int sedadlo ) {
         this.vlastnikRezervace = vlastnikRezervace;
         this.cisloVagonu = cisloVagonu;
         this.sedadlo = sedadlo;
         this.nazevVlaku = nazevVlaku;
+
+        //TODO napsat metodu, která při inicializaci rezervace ji hned přidá do vlaku ke kterému patří
     }
 
     public Uzivatel getVlastnikRezervace() {
