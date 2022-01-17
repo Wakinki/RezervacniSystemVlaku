@@ -22,8 +22,6 @@ public class Rezervace {
     private int sedadlo;
 
 
-
-    //TODO předělat pořadí hodnot tak aby dávali větší smyslo (vlastnikRezervace,nazevVlaku,cisloVagonu,sedadlo)
     public Rezervace(Uzivatel vlastnikRezervace,String nazevVlaku,int cisloVagonu, int sedadlo ) {
         this.vlastnikRezervace = vlastnikRezervace;
         this.cisloVagonu = cisloVagonu;
@@ -70,13 +68,14 @@ public class Rezervace {
 
 
         String[] dataRezervace = {vlastnikRezervace.getFullName(), nazevVlaku, String.valueOf(cisloVagonu), String.valueOf(sedadlo)};
-
+        String fileName = ".\\Jízdenky "+ (vlastnikRezervace.getFullName()).toLowerCase() +".txt";
         try {
             BufferedWriter resWriter =
-                    new BufferedWriter((new FileWriter(".\\Jízdenky"+ (vlastnikRezervace.getFullName()).toLowerCase() +".txt")));
+                    new BufferedWriter((new FileWriter(fileName)));
 
             for(String data: dataRezervace){
                 resWriter.write(data);//TODO struktura vypsání dat do souboru
+                System.out.println("Jízdenka vepsána do souboru " + fileName);
                 resWriter.newLine();
             }
 

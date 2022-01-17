@@ -20,7 +20,12 @@ public class Vlak implements Serializable{
     private ArrayList<Rezervace> rezervace;
     private int delkaVlaku;
 
-
+    public Vlak() {
+        this.nazev = NazvyVlaku.getRandomNazevVlaku().getNazev();
+        this.vagony = nactiVagony(3,10);
+        this.rezervace = new ArrayList<Rezervace>();
+        this.delkaVlaku = vagony.size();
+    }
 
     public Vlak(String nazev) {
         this.nazev = nazev;//TODO napsat enum názvy vlaků aby se při inicializaci mohly náhodně generovat (možnost to samé udělat se stanicemi)
@@ -45,13 +50,13 @@ public class Vlak implements Serializable{
         return delkaVlaku;
     }
 
-    public ArrayList<Vagon> getVagony() {
+    public ArrayList<Vagon> getVagon(int index) {
         return vagony;
     }
 
-    public void setVagony(ArrayList<Vagon> vagony) {
+    /*public void setVagony(ArrayList<Vagon> vagony) {
         this.vagony = vagony;
-    }
+    }*/
 
     public ArrayList<Rezervace> getRezervace() {
         return rezervace;
@@ -92,15 +97,18 @@ public class Vlak implements Serializable{
     }
 
 
-
-
-
-
     @Override
     public String toString() {
-        return "Vlak{" +
-                "vagony=" + vagony +
-                ", rezervace=" + rezervace +
+
+
+        String cislaVagonuVeVlaku = "";
+        for (int i = 0;i<vagony.size();i++) {
+            cislaVagonuVeVlaku += vagony.get(i).getCislo() + ",";
+        }
+
+        return "Vlak:" + nazev + '\'' +
+                ", vagony:" + cislaVagonuVeVlaku +
+                ", počet vagónů:" + delkaVlaku +
                 '}';
     }
 }

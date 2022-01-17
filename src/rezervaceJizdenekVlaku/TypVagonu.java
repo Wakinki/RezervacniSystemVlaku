@@ -15,6 +15,8 @@ public enum TypVagonu {
         BPEE(1,100);
 
     private static final TypVagonu[] typy = TypVagonu.values();
+    private final int pocetKupe;
+    private final int pocetSedadel;
 
     public static TypVagonu getTypVagonu(int i) {
         return typy[i];
@@ -33,8 +35,7 @@ public enum TypVagonu {
         return pocetSedadel;
     }
 
-    private final int pocetKupe;
-        private final int pocetSedadel;
+
 
     TypVagonu(int pocetKupe, int pocetSedadel){
             this.pocetKupe = pocetKupe;

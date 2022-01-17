@@ -4,10 +4,11 @@ package rezervaceJizdenekVlaku;
 public class SeznamObjektu {
 
     private Object[] seznam;
+    private final int startingSize = 8;
     private int indexAfterLastObject = 0;
 
     public SeznamObjektu() {
-        this.seznam = new Object[8];
+        this.seznam = new Object[startingSize];
     }
 
     public void add(Object o){
@@ -17,7 +18,7 @@ public class SeznamObjektu {
             this.seznam = copiedArray;
             copiedArray = null;
         }
-        o = seznam[indexAfterLastObject];
+        seznam[indexAfterLastObject] = o;
         indexAfterLastObject++;
     }
 
@@ -45,4 +46,10 @@ public class SeznamObjektu {
         return seznam[index];
     }
 
+    public int size(){
+       return indexAfterLastObject-1;
+    }
+
 }
+
+

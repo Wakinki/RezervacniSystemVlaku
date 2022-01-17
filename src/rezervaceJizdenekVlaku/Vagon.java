@@ -25,6 +25,18 @@ public class Vagon {
         insertSedadla(sedadla);
     }
 
+    public int getCislo() {
+        return cislo;
+    }
+
+    public int[] getSedadla() {
+        return sedadla;
+    }
+
+    public TypVagonu getTypVagonu() {
+        return typVagonu;
+    }
+
     /*private void insertSedadla(int[] sedadla){ //Funkce která popíše sedadla jako ve vlaku {11,12,13,14,15,16,21,22...
         int pocetSedacekVKupe = typVagonu.getPocetSedadel()/ typVagonu.getPocetKupe();
         for (int sedadlo : sedadla) {
