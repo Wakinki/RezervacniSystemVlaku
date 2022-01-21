@@ -40,7 +40,7 @@ public class SeznamVlaku extends SeznamObjektu implements Serializable {
         indexAfterLastObject++;
     }
 
-    public SeznamVlaku loadRandomTrains(int howMany){ //TODO dopsat třídu na naplnění seznamu náhodnými vlaky
+    public static SeznamVlaku loadRandomTrains(int howMany){ //TODO dopsat třídu na naplnění seznamu náhodnými vlaky
         SeznamVlaku s = new SeznamVlaku();
         for(int i = 0;i<howMany;i++){
             s.add(new Vlak());

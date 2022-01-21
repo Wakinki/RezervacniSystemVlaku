@@ -7,19 +7,18 @@ public class Main {
 
     public static void main(String[] args) throws WrongTrainException {
 
-
+        //TODO neřešit uživatele
       Uzivatel u1 = createUser();
-      SeznamVlaku seznamVlaku = new SeznamVlaku();
-        seznamVlaku.loadRandomTrains(10); //TODO preblém s načítáním vlaků do seznamu
+      SeznamVlaku seznamVlaku = SeznamVlaku.loadRandomTrains(10);
+
 
       for(int i=0;i<seznamVlaku.size();i++){
           System.out.println(seznamVlaku.getOnIndex(i).toString());
       }
       //Vlak v1 = new Vlak("Krušnohor");
-      Rezervace r1 = new Rezervace(u1,"Krušnohor",369,13);
-      Rezervace r2 = new Rezervace(u1,"Krušnohor",367,2);
-
-        r2.printReservationFile();
+      //Rezervace r1 = new Rezervace(u1,"Krušnohor",369,13);
+      //Rezervace r2 = new Rezervace(u1,"Krušnohor",367,2);
+        // r2.printReservationFile();
       //v1.pridejRezervaci(r1);
         
     }

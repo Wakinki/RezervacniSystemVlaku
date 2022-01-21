@@ -1,6 +1,7 @@
 package rezervaceJizdenekVlaku;
 
 public enum NazvyVlaku {
+    //TODO řešit názvy vlaků přes CSV soubor
     MORAVIA("Moravia"),
     POLONIA("Polonia"),
     SLESIA("Slesia"),

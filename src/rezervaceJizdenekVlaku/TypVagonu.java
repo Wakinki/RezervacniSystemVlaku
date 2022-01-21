@@ -9,6 +9,7 @@ package rezervaceJizdenekVlaku;
  *
  * @author Michal Wackermann
  */
+//TODO řešit typy vagónů přes CSV soubor
 public enum TypVagonu {
         B(10,80), //(pocet kupe, pocet sedacek v kupe)
         BMZ(9,54),
