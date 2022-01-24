@@ -13,7 +13,6 @@ public class Vagon {
     
     private int cislo;
     private int[] sedadla;
-    //private int[] rezervace;
     private TypVagonu typVagonu;
     
     //TODO vymyslet jak načíst typy vagonů

@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) throws WrongTrainException {
 
         //TODO neřešit uživatele
-      Uzivatel u1 = createUser();
+      //Uzivatel u1 = createUser();
       SeznamVlaku seznamVlaku = SeznamVlaku.loadRandomTrains(10);
 
 

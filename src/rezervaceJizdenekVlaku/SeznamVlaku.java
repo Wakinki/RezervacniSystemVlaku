@@ -34,7 +34,7 @@ public class SeznamVlaku extends SeznamObjektu implements Serializable {
             Vlak[] copiedArray = new Vlak[this.seznam.length + 8];
             System.arraycopy(seznam, 0, copiedArray, 0, this.seznam.length);
             this.seznam = copiedArray;
-            copiedArray = null;
+           // copiedArray = null;
         }
         seznam[indexAfterLastObject] = o;
         indexAfterLastObject++;

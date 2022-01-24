@@ -9,19 +9,19 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.io.IOException;
-import java.io.Serializable;
+
 /**
  *
  * @author Michal Wackermann
  */
-public class Vlak implements Serializable{
+public class Vlak{
     private String nazev;
     private ArrayList<Vagon> vagony;
     private ArrayList<Rezervace> rezervace;
     private int delkaVlaku;
 
     public Vlak() {
-        this.nazev = NazvyVlaku.getRandomNazevVlaku().getNazev();
+        this.nazev = NazvyVlaku.getRandomNazevVlaku();
         this.vagony = nactiVagony(3,10);
         this.rezervace = new ArrayList<Rezervace>();
         this.delkaVlaku = vagony.size();

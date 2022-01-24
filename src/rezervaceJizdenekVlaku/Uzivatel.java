@@ -15,8 +15,8 @@ public class Uzivatel {
     private String fullName;
 
     public Uzivatel(String jmeno, String prijmeni) {
-        this.jmeno = jmeno;
-        this.prijmeni = prijmeni;
+        this.jmeno = jmeno.trim();
+        this.prijmeni = prijmeni.trim();
         fullName = this.jmeno +" "+ this.prijmeni;
     }
 
